@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css" />
+<!--title of the page-->
+    <title>rock,paper,scissors</title>
+  </head>
+  <body>
+    <h1 class="header">Rock Paper Scissors</h1>
+    <div class="images">
+        <div class="row-one">
+            <img class="image" src="https://www3.bostonglobe.com//rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2018/05/rockpaperscissors/assets/scissors--left.png" onclick="playGame('scissors')" />
+        </div>
+        
+        <div class="row-two">
+            <img class="image" src="http://www.rockyespy.com/Code%20and%20Functions/Game%20-%20Rock%20Paper%20Scissors/images/rock.png" onclick="playGame('rock')"/>
+            <img class="image"  src="https://www3.bostonglobe.com//rw/Boston/2011-2020/WebGraphics/Metro/BostonGlobe.com/2018/05/rockpaperscissors/assets/paper--left.png" onclick="playGame('paper')"/>
+
+        </div>
+        
+    </div>
+    
+    <div id="result">
+        <p id="user-selection"></p>
+        <p id="computer-selection"></p>
+        <p id="final-result"></p>
+    </div>
+
+    <!-- calling JavaScript -->
+    <script src="main.js"></script>
+   </body>
+</html>
