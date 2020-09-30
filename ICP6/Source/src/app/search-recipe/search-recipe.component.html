@@ -1,0 +1,69 @@
+<div class="parent-container">
+  <div class="child-container">
+    <h2><b>Search for your recipe!!
+    </b></h2>
+    <form class="search-form">
+      <div class="search-input-group">
+        <div class="recipe-input">
+          <input #recipe placeholder="Recipe name" type="text">
+        </div>
+        <div class="place-input">
+          <input #place placeholder="Place" type="text">
+        </div>
+      </div>
+      <button (click)="getVenues()" class="btn btn-primary col-lg-2 col-lg-offset-5 " type="button">Go</button>
+    </form>
+  </div>
+</div><br><br>
+<div class="container"  *ngIf="venueList.length >0 && recipeList.length > 0">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>How to make</b></div>
+        <div class="panel-body">
+          <div *ngFor="let recipe of recipeList" class="list-group-item recipe-info clearfix">
+            <div class="recipe-details">
+              <img src="{{recipe.image}}" class="image"/>
+              <div class="header">
+                <h4 class="list-group-item-heading">{{ recipe.label }}</h4>
+                <a href="{{recipe.url}}" class="list-group-item-text">{{ recipe.url }}</a>
+              </div>
+            </div>
+            <ul class="ingredients-list">
+              <h4>Ingredients:</h4>
+              <li *ngFor="let ingredientLine of recipe.ingredientLines">{{ingredientLine}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default col-6">
+        <div class="panel-heading"><b>Where to get</b></div>
+        <div class="panel-body">
+
+          <div *ngFor="let venue of venueList" class="list-group-item venue-info clearfix">
+            <div class="venue-details">
+              <div class="header">
+                <h4 class="list-group-item-heading"><strong>{{ venue.name }}</strong></h4>
+              </div>
+              <div class="map-icon">
+                <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}&daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}">
+                  <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
+              </div>
+            </div>
+            <div class="address">
+              <p><strong>Street : </strong> {{venue.location.formattedAddress[0]}}</p>
+              <p><strong>City : </strong>{{venue.location.formattedAddress[1]}}</p>
+              <p><strong>Country : </strong>{{venue.location.formattedAddress[2]}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
