@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Emergency"
+    android:background="@drawable/emergency_img">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="361dp"
+        android:layout_height="74dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="524dp"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:text="Choose what kind of emergency you have!"
+        android:textColor="#00008B"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="361dp"
+        android:layout_height="168dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="129dp"
+        android:text="THE CALL HAS BEEN PLACED TO 911."
+        android:textColor="#DC143C"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="602dp"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/medical"
+        android:layout_width="267dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:layout_marginBottom="461dp"
+        android:text="Medical Emergency"
+        android:textColor="#0B21E6"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <CheckBox
+        android:id="@+id/theft"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        android:layout_marginBottom="416dp"
+        android:text="Theft"
+        android:textColor="#0B21E6"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <CheckBox
+        android:id="@+id/fire"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        android:layout_marginBottom="366dp"
+        android:text="Fire"
+        android:textColor="#0B21E6"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <CheckBox
+        android:id="@+id/child"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        android:layout_marginBottom="319dp"
+        android:text="Lost Child"
+        android:textColor="#0B21E6"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <CheckBox
+        android:id="@+id/fireexit"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        android:layout_marginBottom="264dp"
+        android:text="Fire exit"
+        android:textColor="#0B21E6"
+       android:onClick="fireExit"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="335dp" />
+
+</RelativeLayout>
